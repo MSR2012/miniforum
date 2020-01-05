@@ -21,6 +21,7 @@
                     <h2>{{$topic->title}}</h2>
                     <h5>Posted By {{$topic->createdBy->username}} on {{$topic->created_at}}</h5>
                     <a href="{{url('my_topics/'.$topic->id.'/edit/')}}">Edit</a>
+                    <br><br>
             </div>
             <div class="col-md-2"></div>
             <br><br>

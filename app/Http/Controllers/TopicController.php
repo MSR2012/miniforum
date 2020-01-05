@@ -22,7 +22,7 @@ class TopicController extends Controller {
 
         $topic = \App\Model\Topic::with('category', 'createdBy')->find($topic_id);
 
-        $replies = $topic->replies()->with('commentedBy')->orderBy('id', 'desc')->get();
+        $replies = $topic->replies()->with('commentedBy')->orderBy('id', 'asc')->get();
 
         return view('topics.view', compact('topic', 'replies'));
     }
